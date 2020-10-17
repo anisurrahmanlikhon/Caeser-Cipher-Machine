@@ -1,37 +1,124 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Caesar Cipher</title>
+	</head>
+	<body><center>
+		Input shift number <Br><Br>
+  <input type="tel" placeholder= "input number here" id="num"><br><br>
+Input Text <br><br>
+  <input type="text"  placeholder= "input text here"  id="txt"><br><br><br>
+  
+  <button onclick="caesar()">Encode</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button onclick="decaesar()">Decode</button>
+  
+  
+	</center></body>
+</html>
 
-You can use the [editor on GitHub](https://github.com/anisurrahmanlikhon/Ceaser-Cipher-Machine/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+function caesar(){
+  var num = parseInt(document.getElementById("num").value)
+  var txt = document.getElementById("txt").value;
+  var x = [];
+  if(num>=-26 && num<=26){
+      for(i=0;i<txt.length;i++){
+        x[i] = txt.charCodeAt(i)+num;
+        if(txt.charCodeAt(i)>=65 && txt.charCodeAt(i)<=90){
+         
+          if(x[i]>=65&&x[i]<=90){
+            x[i]=x[i];
+          }
+          else if(x[i]>90){
+            x[i]=x[i]-26;
+          }
+          else if(x[i]<65){
+            x[i]=x[i]+26;     
+          }
+        
+      }
+        if(txt.charCodeAt(i)==32){
+            x[i]=txt.charCodeAt(i);
+          }
+        
+        if(txt.charCodeAt(i)>=97 && txt.charCodeAt(i)<=122){
+          
+          if(x[i]>=97&&x[i]<=122){
+            x[i]=x[i];
+          }
+          else if(x[i]>122){
+            x[i]=x[i]-26;
+          }
+          else if(x[i]<97){
+            x[i]=x[i]+26;     
+          }
+          
+        }
+        
+        
+      }
+    
+    
+  }
+  else{
+    document.write("Number must be from -26 to 26, try again :)")
+  }
+  
+  document.write(String.fromCharCode.apply(null, x))
+  
+}
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function decaesar(){
+  var num = parseInt(document.getElementById("num").value)*-1
+  var txt = document.getElementById("txt").value;
+  var x = [];
+  if(num>=-26 && num<=26){
+      for(i=0;i<txt.length;i++){
+        x[i] = txt.charCodeAt(i)+num;
+        if(txt.charCodeAt(i)>=65 && txt.charCodeAt(i)<=90){
+         
+          if(x[i]>=65&&x[i]<=90){
+            x[i]=x[i];
+          }
+          else if(x[i]>90){
+            x[i]=x[i]-26;
+          }
+          else if(x[i]<65){
+            x[i]=x[i]+26;     
+          }
+        
+      }
+        if(txt.charCodeAt(i)==32){
+            x[i]=txt.charCodeAt(i);
+          }
+        
+        if(txt.charCodeAt(i)>=97 && txt.charCodeAt(i)<=122){
+          
+          if(x[i]>=97&&x[i]<=122){
+            x[i]=x[i];
+          }
+          else if(x[i]>122){
+            x[i]=x[i]-26;
+          }
+          else if(x[i]<97){
+            x[i]=x[i]+26;     
+          }
+          
+        }
+        
+        
+      }
+    
+    
+  }
+  else{
+    document.write("Number must be from -26 to 26, try again :)")
+  }
+  
+  document.write(String.fromCharCode.apply(null, x))
+  
+}
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anisurrahmanlikhon/Ceaser-Cipher-Machine/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</script>
