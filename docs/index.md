@@ -4,9 +4,9 @@
 		<title>Caesar Cipher</title>
 	</head>
 	<body><center>
-		Input shift number <Br><Br>
+		<b>Input shift number</b> <Br>
   <input type="tel" placeholder= "input number here" id="num"><br><br>
-Input Text <br><br>
+		<b>Input Text</b> <br>
   <input type="text"  placeholder= "input text here"  id="txt"><br><br><br>
   
   <button onclick="caesar()">Encode</button><br><br>
