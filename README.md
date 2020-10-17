@@ -1,3 +1,3 @@
 # Ceaser-Cipher-Machine
 
-https://anisurrahmanlikhon.github.io/Ceaser-Cipher-Machine/
+https://anisurrahmanlikhon.github.io/Caeser-Cipher-Machine/
