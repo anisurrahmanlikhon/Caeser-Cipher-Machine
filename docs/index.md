@@ -9,7 +9,7 @@
 Input Text <br><br>
   <input type="text"  placeholder= "input text here"  id="txt"><br><br><br>
   
-  <button onclick="caesar()">Encode</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button onclick="caesar()">Encode</button><br><br>
   <button onclick="decaesar()">Decode</button>
   
   
