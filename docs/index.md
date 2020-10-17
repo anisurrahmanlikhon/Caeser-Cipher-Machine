@@ -114,7 +114,7 @@ function decaesar(){
     
   }
   else{
-    document.write("Number must be from -26 to 26, try again :)")
+    document.write("Number must be included -26 to 26, try again.")
   }
   
   document.write(String.fromCharCode.apply(null, x))
